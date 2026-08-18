@@ -1,0 +1,13 @@
+,cão,gato,equino
+albumina_min,"2,3 g/dL","2,8 g/dL","2,6 g/dL"
+albumina_max,"3,1 g/dL","3,9 g/dL","4,1 g/dL"
+glicemia_min,76 mg/dL,60 mg/dL,89 mg/dL
+glicemia_max,119 mg/dL,120 mg/dL,112 mg/dL
+hematocrito_min,35%,30%,27%
+hematocrito_max,57%,45%,43%
+rbc_min,"4,95 * 10^6/mcL",5 * 10^6/mcL,6 * 10^6/mcL
+rbc_max,"7,87 * 10^6/mcL",10 * 10^6/mcL,"10,4 * 10^6/mcL"
+prt_totais_plasma_min,6 g/dL,6 g/dL,6 g/dL
+prt_totais_plasma_max,"7,5 g/dL","7,5 g/dL","8,5 g/dL"
+prt_totais_soro_min,"5,4 g/dL",6 g/dL,"5,6 g/dL"
+prt_totais_soro_max,"7,5 g/dL","7,9 g/dL","7,6 g/dL"

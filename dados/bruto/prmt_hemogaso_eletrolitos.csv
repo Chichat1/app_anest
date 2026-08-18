@@ -1,0 +1,13 @@
+,cão,gato,equino
+anion_gap (AG),até 24 mEq/L,até 31 mEq/L,até 16 mEq/L
+excesso_base (BE),-0 a 0 mEq/L,-5 a 0 mEq/L,0 a +8 mEq/L
+bicarbonato_arterial (HCO3-),19 a 23 mEq/L,17 a 21 mEq/L,21 a 29 mEq/L
+cloreto (CL-),107 a 113 mEq/L,117 a 123 mEq/L,95 a 110 mEq/L
+complacencia_dinamica,"8,845 + (0,895 * PV) mL/cmH20 ",-,-
+calcio_ionizado (iCa),"1,2 a 1,5 mmol/L","1,1 a 1,4 mmol/L","1,45 a 1,75 mmol/L"
+lactato (Lac-),"até 2,5 mmol/L","até 2,5 mmol/L","até 1,3 mmol/L"
+potassio (k+),"4 a 5,5 mEq/L","4,0 a 5,5 mEq/L","2,7 a 4,8 mEq/L"
+razao_paO2_fiO2,>300,>300,>300
+sodio (Na+),146 mEq/L,156 mEq/L,130 a 146 mEq/L
+pH_arterial,"7,35 a 7,46","7,31 a 7,46","7,30 a 7,50"
+indice_variabilidade_pletismografica ,< 11 a 14%,-,-
