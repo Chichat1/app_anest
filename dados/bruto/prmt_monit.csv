@@ -1,0 +1,42 @@
+,cão,gato,equino
+hb_min,"11,9 g/dL","9,8 g/dL","10,1 g/dL"
+hb_max,"18,9 g/dL","15,4 g/dL","16,1 g/dL"
+LVEDd,"< 1,7 cm","1,25 a 1,65 cm","11,47 cm"
+debito_urinario,1 - 2 mL/kg/h,1 - 2 mL/kg/h,1 - 2 mL/kg/h
+relacao_e/a_min,"0,92","1,2","0,953"
+relacao_e/a_max,"2,72","1,8","3,56"
+equacao_shunt,até 5%,-,"até 3% estação, >30% decubito dorsal"
+fracao_ejecao_min,47%,"70,90%",-
+fracao_ejecao_max,81%,"87,20%",-
+fracao_encurtamento,> 25%,20-50%,"37,26 ± 3,8%"
+fc_min,60 bpm,120 bpm,28 bpm
+fc_max,220 bpm,240 bpm,40 bpm
+fr_min,12 rpm,20 rpm,12 rpm
+fr_max,36 rpm,40 rpm,20 rpm
+pAaO2,"até 15 mmHg (FiO2 0,21)",-,-
+pacO2_min,31 mmHg,25 mmHg,33 mmHg
+pacO2_max,43 mmHg,37 mmHg,50 mmHg
+paO2_min,81 mmHg,95 mmHg,89 mmHg
+paO2_max,103 mmHg,118 mmHg,101 mmHg
+pad_min,60 mmHg,60 mmHg,60 mmHg
+pad_max,100 mmHg,100 mmHg,100 mmHg
+pam_min,65 mmHg,65 mmHg,65 mmHg
+pam_max,120 mmHg,120 mmHg,120 mmHg
+pas_min,100 mmHg,100 mmHg,100 mmHg
+pas_max,160 mmHg,160 mmHg,160 mmHg
+pvc,"até 7-10 cmH2O, geralmente 0-5 cmH2O","até 7-10 cmH2O, geralmente 0-5 cmH2O","15-25 cmH2O (decúbito lateral)
+5-10 cmH2O (decúbito dorsal)"
+razao_ae_aorta,"< 1,6","< 1,6","1,4 ± 0,1"
+temp_min,"36,1 °C (jovens)
+37,5 °C (adultos)","38,0 °C (jovens)
+37,8 °C (adultos)","37,2 °C (jovens)
+37,5 °C (adultos"
+temp_max,"37,7 °C (jovens)
+39,2 °C (adultos)","39,5 °C (jovens)
+39,2 °C (adultos)","38,0 °C (jovens)
+38,5 °C (adultos)"
+triv,31 a 73 ms,43 ± 9 ms,-
+variacao_pas,"≤ 4,1 a 4,5% ou ≤ 4 mmHg",-,"10,3 ± 2,6% a 7,3 ± 3,3%"
+volume_sistolico,"1,6-1,9 mL/batimento/kg","0,9-1 mL/batimento/kg","2,6-3 mL/batimento/kg"
+indice_cardiaco,190-230 mL/kg/min,160-180 mL/kg/min,115-135 mL/kg/min
+dO2,20-35 mL/kg/min,"33,57 ± 2,61 mL/min (anestesiado)",4606 mL/min

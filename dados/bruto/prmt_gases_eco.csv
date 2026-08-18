@@ -1,0 +1,14 @@
+,cão,gato,equino
+etcO2_min,35 mmHg,35 mmHg,35 mmHg
+etcO2_max,45 mmHg,45 mmHg,45 mmHg
+caO2_min,19 mL/dL,-,"28,54 mL/dL"
+caO2_max,21 mL/dL,-,"29,26 mL/dL"
+razao_spO2_fiO2,> 150-315,> 150-315,> 150-315
+spO2,"à partir de 95% (FiO2 1,0)","à partir de 95% (FiO2 1,0)",acima de 93%
+volume_corrente,"13 ± 6 mL/kg (Beagle)
+18 ± 9 mL/kg (mesocefalico)
+25 ± 7 mL/kg (dolicocefálico)",14 ± 4 mL/kg,15 ± 2 mL/kg
+ppv,≤ 7-16% (≤13%),-,"7,9-33,8% (15,6%) a 10,7 ± 7,2%"
+cvc_cl,≤ 27%,≤ 31%,"30-36% (sedados)
+26 ± 10% (potros em estação)"
+resistencia_vias_aereas,"6,965 - (0,0966 * PV) cmH2O/L/s","33,7 a 43,6 cmH2O/L/s","1 ± 0,3 cmH2O/L/s"
