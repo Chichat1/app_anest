@@ -47,9 +47,13 @@ def tela_bulario():
     # Exibindo a tabela no streamlit
     st.dataframe(df, use_container_width=True, hide_index=True)
 
-def tela_em_construcao(titulo):
-    st.title(titulo)
-    st.warning('🚧 Esta ferramenta está em desenvolvimento. Em breve estará disponível!')
+def tela_parametros():
+    st.title('Parâmatros por espécie')
+    st.markdown('Parâmetros fisiológico, hematológicos e bioquímicos por espécie')
+
+    try:
+        df = pd.read_csv('prmt_hc_bq.csv')
+        df = pd.DataFrame(prmt_hc_bq)
 
 # ==========================================
 # ESTRUTURA PRINCIPAL E BARRA LATERAL
