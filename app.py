@@ -35,6 +35,18 @@ def main():
 # FUNÇÕES DAS TELAS (Módulos do aplicativo)
 # PREPARO ANESTÉSICO-CIRÚRGICO
 # ==========================================
+def calcular_peso_ideal(peso_real, ecc):
+    if ecc ==5:
+        return peso_real
+    elif ecc < 5:
+        # Paciente com sobrepeso
+        percentual_excesso = (ecc - 5) * 0.10
+        return peso_real / (1.0 + percentual_excesso)
+    else:
+        # Paciente caquético
+        percentual_deficit = (ecc - 5) * 0.10
+        return peso_real / (1.0 + percentual_deficit)
+
 def tela_preparo():
     st.title('Preparo anestésico-cirúrgico')
     st.markdown('Cálculo preditivo do tamanho de sonda endotraqueal com base no peso do paciente')
@@ -44,20 +56,22 @@ def tela_preparo():
         st.subheader('Dados do paciente')
         col_peso, col_ecc = st.columns(2)
         with col_peso:
-            peso = st.number_input('Peso (kg)', min_value=0.1, max_value=70.0, format='%.1f')
+            peso = st.number_input('Peso (kg)', min_value=0.1, max_value=70.0, step=0.1, format='%.1f')
         with col_ecc:
-            ecc = st.number_input('Escore de condição corporal (ECC)', min_value=1, max_value=9, step=1)
+            ecc = st.number_input('Escore de condição corporal (ECC)', min_value=1, max_value=9, step=1, value=5)
 
     if st.button('Calcular', type='primary', use_container_width=True):
         if peso > 0:
+            # DEFINE O PESO IDEAL ANTES DE TUDO COM BASE EM 'peso' E 'ecc'
+            peso_ideal = calcular_peso_ideal(peso, ecc)
+            # DEFINE O PESO RESPIRATÓRIO (para cálculo de sonda, se for obeso (>5), usa-se o peso ideal, se for magro (<5) mantém-se o peso real)
+            peso_respiratorio = peso_ideal if ecc > 5 else peso
             # CÁLCULO DE SONDA ENDOTRAQUEAL
-            numero_sonda = math.sqrt(peso * 4)
-            
+            numero_sonda = math.sqrt(peso_respiratorio * 4)
             # CÁLCULO DE BALÃO RESERVATÓRIO
             volume_min_ml = peso * 60
             volume_max_ml = peso * 90
             volume_medio_l = ((volume_min_ml + volume_max_ml) / 2) / 1000
-            
             # LÓGICA PARA SUGERIR O BALÃO COMERCIAL
             if volume_medio_l <= 0.5:
                 balao_comercial = '0,5 L'
@@ -69,18 +83,25 @@ def tela_preparo():
                 balao_comercial = '3 L'
             else:
                 balao_comercial = '5 L'
-            
             # CÁLCULO DE FLUIDOTERAPIA
             manutencao = peso * 4  # ml/h
             reposicao = peso * 10  # ml/h
-
             # CÁLCULO DE VOLUME CORRENTE
             vt_min = peso * 10 # mL
             vt_max = peso * 15 # mL
 
+
             st.divider() # Linha de separação
-            st.subheader('Cálculos')
-            col_res1, col_res2 = st.columns(2)
+            st.subheader('Resultados estimados')
+
+            # AVISOS VISUAIS SOBRE O ECC
+            if ecc > 5:
+                st.warning(f"⚠️ **Sobrepeso/Obesidade (ECC {ecc})**: O peso ideal estimado é de **{peso_ideal:.1f} kg**. Os cálculos respiratórios foram ajustados para o peso ideal para prevenir barotrauma/volutrauma e superdimensionamento da sonda.")
+            elif ecc < 5:
+                st.info(f"ℹ️ **Abaixo do peso (ECC {ecc})**: Peso ideal estimado em **{peso_ideal:.1f} kg**.")
+
+            # EXIBIÇÃO EM COLUNAS
+            col_res1, col_res2, col_res3 = st.columns(3)
             
             with col_res1:
                 with st.container(border=True):
@@ -91,6 +112,11 @@ def tela_preparo():
                 with st.container(border=True):
                     st.metric(label='Balão reservatório', value=f'{balao_comercial}')
                     st.caption(f'Calculado: {volume_min_ml:.1f} a {volume_max_ml:.1f} L')
+
+            with col_res3:
+                with st.container(border=True):
+                    st.metric(label='Peso ideal', value=f'{peso_ideal:.1f} kg')
+                    st.caption('Peso ideal calculado com base no ECC')
 
             st.subheader('Fluidoterapia intravenosa')
             col_flu1, col_flu2 = st.columns(2)
